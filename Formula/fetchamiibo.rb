@@ -2,8 +2,8 @@ class Fetchamiibo < Formula
   desc "Download amiibo NFC dumps for a Flipper Zero, by name or by game and letter"
   homepage "https://github.com/SamuelArther/fetchamiibo"
   # Windows (brew-windows) installs the standalone build; macOS and Linux build the tagged source below.
-  url "https://github.com/SamuelArther/fetchamiibo/releases/download/v1.0.0/fetchamiibo-windows.exe"
-  sha256 "c918eb82de7c8e7d763b81760992a8fcfbbe98119b2ea9f5b2fe719f0bbe5cbf"
+  url "https://github.com/SamuelArther/fetchamiibo/releases/download/v1.1.0/fetchamiibo-windows.exe"
+  sha256 "aeee14839eea261ed3744953d4289dddfb6f722ff638b7eddd11430aacad031b"
   license "MIT"
 
   livecheck do
@@ -12,15 +12,15 @@ class Fetchamiibo < Formula
   end
 
   on_macos do
-    url "https://github.com/SamuelArther/fetchamiibo/archive/refs/tags/v1.0.0.tar.gz"
-    sha256 "15a40a055e643bd2c76b46e30c14724687abb24bb2da9f01ee512b18755de5a3"
+    url "https://github.com/SamuelArther/fetchamiibo/archive/refs/tags/v1.1.0.tar.gz"
+    sha256 "20de216064e57f107d57053dfae9fc3e23d262c8a55bfffa634c5c277c367566"
 
     depends_on "python@3.14"
   end
 
   on_linux do
-    url "https://github.com/SamuelArther/fetchamiibo/archive/refs/tags/v1.0.0.tar.gz"
-    sha256 "15a40a055e643bd2c76b46e30c14724687abb24bb2da9f01ee512b18755de5a3"
+    url "https://github.com/SamuelArther/fetchamiibo/archive/refs/tags/v1.1.0.tar.gz"
+    sha256 "20de216064e57f107d57053dfae9fc3e23d262c8a55bfffa634c5c277c367566"
 
     depends_on "python@3.14"
   end
