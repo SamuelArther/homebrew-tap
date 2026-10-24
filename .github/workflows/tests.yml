@@ -15,10 +15,11 @@ jobs:
       fail-fast: false
       matrix:
         os: [macos-latest, ubuntu-latest]
+        formula: [fetchart, fetchamiibo]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: Homebrew/actions/setup-homebrew@main
-      - run: brew install --verbose samuelarther/tap/fetchart
-      - run: brew test samuelarther/tap/fetchart
-      - run: fetchart --help
-      - run: brew audit --online samuelarther/tap/fetchart
+      - run: brew install --verbose samuelarther/tap/${{ matrix.formula }}
+      - run: brew test samuelarther/tap/${{ matrix.formula }}
+      - run: ${{ matrix.formula }} --help
+      - run: brew audit --online samuelarther/tap/${{ matrix.formula }}
