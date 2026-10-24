@@ -5,7 +5,6 @@ class Fetchart < Formula
   homepage "https://github.com/SamuelArther/fetchart"
   # Windows (brew-windows) installs the standalone build; macOS and Linux build the PyPI package below.
   url "https://github.com/SamuelArther/fetchart/releases/download/v1.5.0/fetchart-windows.exe"
-  version "1.5.0"
   sha256 "0782758399782cd548e2987ec326920aae6f756eff5c9690a8ee305a7a6c349f"
   license "MIT"
 
