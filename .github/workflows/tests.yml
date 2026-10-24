@@ -6,6 +6,8 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  # Called by bump.yml after an automatic bump (pushes made with GITHUB_TOKEN don't trigger push events).
+  workflow_call:
 
 jobs:
   test:

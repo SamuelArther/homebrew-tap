@@ -18,3 +18,5 @@ brew install fetchart
 | [fetchart](https://github.com/SamuelArther/fetchart) | Download game art, achievements, posters, album covers and more from the command line |
 
 Taps and formulae work the way [Homebrew](https://brew.sh) defines them.
+
+`fetchart` is bumped automatically: `.github/workflows/bump.yml` runs every few hours, and once a new release has both its PyPI sdist and its GitHub release exe, `scripts/bump_fetchart.py` rewrites the formula, commits it, and runs the tests.
