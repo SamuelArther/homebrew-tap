@@ -2,8 +2,8 @@ class Fetchart < Formula
   desc "Download game art, achievements, posters, album covers and more from the command line"
   homepage "https://github.com/SamuelArther/fetchart"
   # Windows (brew-windows) installs the standalone build; macOS and Linux build the PyPI package below.
-  url "https://github.com/SamuelArther/fetchart/releases/download/v1.5.0/fetchart-windows.exe"
-  sha256 "0782758399782cd548e2987ec326920aae6f756eff5c9690a8ee305a7a6c349f"
+  url "https://github.com/SamuelArther/fetchart/releases/download/v1.6.0/fetchart-windows.exe"
+  sha256 "ae5b1660ac687b5f1a78afea0d047739f03909a3ff1c34a8f580c9596f573a99"
   license "MIT"
 
   livecheck do
@@ -14,16 +14,16 @@ class Fetchart < Formula
   end
 
   on_macos do
-    url "https://files.pythonhosted.org/packages/fc/13/12db2e8d879a93ff8b38ae1c05a7bfc9442970a1b12ebc0b16a38438e9b3/fetchart-1.5.0.tar.gz"
-    sha256 "0cb32484b48a053c1730d44d24bc0865cc4075042779654161f32bea64ad223f"
+    url "https://files.pythonhosted.org/packages/e8/9f/aa29482a9db81a325ab9fae84feace0ba59c7199a81de5aeb461625310d0/fetchart-1.6.0.tar.gz"
+    sha256 "d495ba7ebf75dc4b5136c81c66696da68ff827f78740775b77f8d1ace720efc0"
 
     depends_on "pillow"
     depends_on "python@3.14"
   end
 
   on_linux do
-    url "https://files.pythonhosted.org/packages/fc/13/12db2e8d879a93ff8b38ae1c05a7bfc9442970a1b12ebc0b16a38438e9b3/fetchart-1.5.0.tar.gz"
-    sha256 "0cb32484b48a053c1730d44d24bc0865cc4075042779654161f32bea64ad223f"
+    url "https://files.pythonhosted.org/packages/e8/9f/aa29482a9db81a325ab9fae84feace0ba59c7199a81de5aeb461625310d0/fetchart-1.6.0.tar.gz"
+    sha256 "d495ba7ebf75dc4b5136c81c66696da68ff827f78740775b77f8d1ace720efc0"
 
     depends_on "pillow"
     depends_on "python@3.14"
