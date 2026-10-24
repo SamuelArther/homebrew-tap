@@ -1,6 +1,4 @@
 class Fetchart < Formula
-  include Language::Python::Virtualenv
-
   desc "Download game art, achievements, posters, album covers and more from the command line"
   homepage "https://github.com/SamuelArther/fetchart"
   # Windows (brew-windows) installs the standalone build; macOS and Linux build the PyPI package below.
@@ -33,6 +31,9 @@ class Fetchart < Formula
 
   def install
     if OS.mac? || OS.linux?
+      # Homebrew's Python helpers, brought in here rather than with a class-level include: older
+      # brew-windows builds don't have them and would fail just loading the formula.
+      extend Language::Python::Virtualenv
       virtualenv_install_with_resources
     else
       bin.install "fetchart-windows.exe" => "fetchart.exe"
