@@ -1,0 +1,22 @@
+name: Tests
+
+# Installs and tests every formula with real Homebrew on macOS and Linux.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@main
+      - run: brew install --verbose samuelarther/tap/fetchart
+      - run: brew test samuelarther/tap/fetchart
+      - run: fetchart --help
+      - run: brew audit --online samuelarther/tap/fetchart
